@@ -1,6 +1,8 @@
-<nav class="navbar navbar-expand-lg shadow-md py-2 bg-slate-800 text-white relative flex flex-col max-w-xs">
+<nav class="navbar navbar-expand-lg shadow-md py-2 bg-slate-800 text-white relative flex flex-col">
 	<div class="mb-10 text-center flex flex-col items-center">
-		<img src="./img/logo.png" width="50%" height="50%" alt="Photo de logo">
+		<a href="{{ path('home') }}" class="relative inset-x-1/4">
+			<img src="./img/logo.png" width="50%" height="50%" alt="Photo de logo">
+		</a>
 		<span>Web Developpeur</span>
 		<span class="bg-blue-700 p-1 rounded-lg">Junior</span>
 	</div>
@@ -8,15 +10,15 @@
 	<div class="text-center">
 		<ul>
 			<li class="outline outline-1 py-3 hover:bg-sky-600 active:bg-sky-700">
-				<a href="">A Propos</a>
+				<a href="{{ path('about') }}">A Propos</a>
 			</li>
-			<li class="outline outline-1 py-3 hover:bg-sky-600 active:bg-sky-700">
+			<li class="outline outline-1 py-3 hover:bg-sky-600 ">
 				<a href="">Skills</a>
 			</li>
-			<li class="outline outline-1 py-3 hover:bg-sky-600 active:bg-sky-700">
+			<li class="outline outline-1 py-3 hover:bg-sky-600 ">
 				<a href="">Projets</a>
 			</li>
-			<li class="outline outline-1 py-3 hover:bg-sky-600 active:bg-sky-700">
+			<li class="outline outline-1 py-3 hover:bg-sky-600 ">
 				<a href="">Contact</a>
 			</li>
 		</ul>
@@ -34,8 +36,9 @@
 				PT
 			</option>
 		</select>
-		<button class="bg-white w-5 h-5 rounded-xl">
-			<i class="fa-solid fa-moon "></i>
+		<button class="">
+			<i class="fa-solid fa-moon moon"></i>
+            <i class="fa-regular fa-lightbulb sun"></i>
 		</button>
 	</div>
 
@@ -53,7 +56,7 @@
 			</li>
 			<li>
 				<a href="">
-					<span class="text-sky-500 font-black">CV</span>
+					<span class="text-amber-600 font-black">CV</span>
 				</a>
 			</li>
 		</ul>

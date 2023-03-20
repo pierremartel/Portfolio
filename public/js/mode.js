@@ -1,15 +1,49 @@
-// let btn = document.getElementById('toggle_mode');
-// console.log(btn);
+// icons 
+const sunIcon = document.querySelector(".sun");
+const moonIcon = document.querySelector(".moon");
 
-// btn.addEventListener('click', function(){ 
-//     const body = document.body;
+console.log(sunIcon, moonIcon);
 
-//     if(body.classList.contains('dark')){
-//         body.classList.add('light');
-//         body.classList.remove('dark');
+// Theme Vars
+const userTheme = localStorage.getItem("theme");
+const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-//     } else if(body.classList.contains('light')){
-//         body.classList.add('dark');
-//         body.classList.remove('light');
-//     }
-// })
+// Icon Toggling
+const iconToggle = () => {
+    moonIcon.classList.toggle("display-none");
+    sunIcon.classList.toggle("display-none");
+};
+
+// Initial Theme Check
+const themeCheck = () => {
+    if(userTheme === "dark" || (!userTheme && systemTheme)){
+        document.documentElement.classList.add("dark");
+        moonIcon.classList.add("display-none");
+        return;
+    }
+    sunIcon.classList.add("display-none");
+};
+
+// Manual Theme Switch
+const themeSwitch = () => {
+    if(document.documentElement.classList.contains("dark")) {
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+        iconToggle();
+        return;
+    }
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+    iconToggle();
+};
+
+// Call theme switch on clicking buttons
+sunIcon.addEventListener("click", () => {
+    themeSwitch();
+});
+moonIcon.addEventListener("click", () => {
+    themeSwitch();
+});
+
+// Invoke theme check on initial load
+themeCheck();

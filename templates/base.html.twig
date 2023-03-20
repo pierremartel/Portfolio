@@ -18,12 +18,14 @@
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
-    <body class="light">
-        <div class="container flex main__menu">
+    <body class="dark:bg-slate-900 bg-slate-100">
+        <div class="flex main__menu">
             {# Navbar #}
             {% include "shared/_navbar.html.twig" %}
 
             {% block body %}{% endblock %}
         </div>
+
+        <script src="../../js/mode.js"></script>
     </body>
 </html>

@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About{% endblock %}
+
+{% block body %}
+
+  <section class="container max-w-5xl mx-auto py-8">
+    <div class="profil__me">
+      <div class="profil__me_title">
+        <h1 class="text-3xl font-semibold text-gray-500">Qui suis-je?</h1>
+        <h2 class="text-7xl font-black">Moi</h2>
+      </div>
+      <div class="flex justify-between profil__me_content mt-10">
+        <div class="mr-16 text-lg leading-8">
+          <p class="mb-6">Je me présente, moi c’est Pierre Martel, 31ans, développeur web junior fullstack depuis maintenant 1ans, avec une préférence pour le back-end et Symfony.</p>
+          <p>Je suis un passionné d’informatique et de sport dans mon temps libre. J’aime beaucoup voyager à l’étranger. J’ai notamment pu visiter un grand nombre de pays et découvert de nouvelles culture, ce qui m’a permis d’améliorer mes compétences linguistiques en anglais et en espagnol.</p>
+        </div>
+        <div class="profil__me_picture">
+          <img src="./img/profile_img2.jpg" alt="photo visage" class="rounded-lg">
+        </div>
+      </div>
+    </div>
+
+    <div class="profil__parcours mt-8">
+      <div class="profil__parcours_title text-right mb-8">
+        <h2 class="text-7xl font-black">Mon parcours</h2>
+      </div>
+      <div class="flex flex-row-reverse profil__parcours_content">
+        <div class="ml-16 text-lg leading-8">
+          <p class="mb-6">Après plusieurs années dans le domaine de la logistique et une mûre réflexion sur mon orientation futur, j’ai décidé de me reconvertir dans le monde du numérique pour devenir développeur web. A la suite d’un an de formation, stage et projets, j’obtenais mon diplôme de Développeur web FullStack.</p>
+          <p>C’est un domaine que j’ai appris à aimer et dont je prend un réel plaisir à pratiquer chaque jour.</p>
+        </div>
+        <div class="profil__parcours_picture rounded">
+          <img src="./img/profile_img1.jpg" alt="photo ordinateur" class="rounded-lg">
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-5 w-6/12 mx-auto">
+
+    <button class=" px-10 py-3 bg-orange-500 text-white font-semibold rounded text-xl">Mon CV</button>
+
+
+  </section>
+
+{% endblock %}
