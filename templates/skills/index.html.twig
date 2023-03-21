@@ -1,20 +1,47 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SkillsController!{% endblock %}
+{% block title %}Skills{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+<section class="container max-w-5xl mx-auto py-8 flex h-screen dark:text-white">
+    <div class="">
+        <div class="">
+            <h1 class="text-3xl font-semibold text-gray-500">Ce que je sais faire</h1>
+            <h2 class="text-7xl font-black">Skills</h2>
+        </div>
+        <div class="mr-16 text-lg leading-8 my-10">
+            <p>De part mes formations et mes connaissances
+            personnelle, j’ai pu acquérir un certain niveau 
+            de compétences techniques dont voici un aperçu :
+            </p>
+        </div>
+        <div>
+            <div class="mb-8">
+                <p>HTML , CSS , Bootstrap , GitHub , VSCode</p>
+                <div class="bg-slate-200 h-5 rounded-xl w-full ">
+                    <div class="bg-red-700 h-5 rounded-xl w-3/5 "></div>
+                </div>
+            </div>
+            <div class="mb-8">
+                <p>PHP , Symfony , Twig , Javascript , MySQL</p>
+                <div class="bg-slate-200 h-5 rounded-xl w-full ">
+                    <div class="bg-red-700 h-5 rounded-xl w-2/5 "></div>
+                </div>
+            </div>
+            <div class="mb-8">
+                <p>Angular2+ , jQuery , PostgreSQL , Tailwind , Figma</p>
+                <div class="bg-slate-200 h-5 rounded-xl w-full ">
+                    <div class="bg-red-700 h-5 rounded-xl w-1/5 "></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/33665/OneDrive/Bureau/LAB/Portfolio/myportfolio/src/Controller/SkillsController.php'|file_link(0) }}">src/Controller/SkillsController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/33665/OneDrive/Bureau/LAB/Portfolio/myportfolio/templates/skills/index.html.twig'|file_link(0) }}">templates/skills/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <aside class="ml-32 w-4/5 mt-14 pt-12">
+        <img src="../../img/nuage-de-mots.jpg" alt="nuage de mots"  class="rounded-lg h-96 object-cover">
+    </aside>    
+
+</section>
+
 {% endblock %}
