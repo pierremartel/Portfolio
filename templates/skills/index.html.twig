@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Skills{% endblock %}
+
+{% block body %}
+
+<section class="container max-w-5xl mx-auto py-8 flex h-screen dark:text-white">
+    <div class="">
+        <div class="">
+            <h1 class="text-3xl font-semibold text-gray-500">Ce que je sais faire</h1>
+            <h2 class="text-7xl font-black">Skills</h2>
+        </div>
+        <div class="mr-16 text-lg leading-8 my-10">
+            <p>De part mes formations et mes connaissances
+            personnelle, j’ai pu acquérir un certain niveau 
+            de compétences techniques dont voici un aperçu :
+            </p>
+        </div>
+        <div>
+            <div class="mb-8">
+                <p>HTML , CSS , Bootstrap , GitHub , VSCode</p>
+                <div class="bg-slate-200 h-5 rounded-xl w-full ">
+                    <div class="bg-red-700 h-5 rounded-xl w-3/5 "></div>
+                </div>
+            </div>
+            <div class="mb-8">
+                <p>PHP , Symfony , Twig , Javascript , MySQL</p>
+                <div class="bg-slate-200 h-5 rounded-xl w-full ">
+                    <div class="bg-red-700 h-5 rounded-xl w-2/5 "></div>
+                </div>
+            </div>
+            <div class="mb-8">
+                <p>Angular2+ , jQuery , PostgreSQL , Tailwind , Figma</p>
+                <div class="bg-slate-200 h-5 rounded-xl w-full ">
+                    <div class="bg-red-700 h-5 rounded-xl w-1/5 "></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <aside class="ml-32 w-4/5 mt-14 pt-12">
+        <img src="../../img/nuage-de-mots.jpg" alt="nuage de mots"  class="rounded-lg h-96 object-cover">
+    </aside>    
+
+</section>
+
+{% endblock %}
