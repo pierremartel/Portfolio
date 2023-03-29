@@ -1,0 +1,8 @@
+contact:
+  page:
+    mainTitle: 'Contact'
+    subtitle: 'My contact informations'
+    title: 'Contact'
+    formTitle: 'Dont be shy, say hello !'
+    name: 'Name'
+    button: 'Send message'

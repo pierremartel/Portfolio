@@ -1,0 +1,16 @@
+about:
+  page:
+    mainTitle: 'About'
+    subtitle: 'Who i am?'
+    title1: 'Me'
+    presentation1: 'I introduce myselft, i am Pierre Martel, 31years old, Junior Fullstack Web Developer since 1 year now, 
+                  with preference for Back-end and Symfony.'
+    presentation2: 'I am passionate about computers and sports during my free times. I love travelling around the world.
+                   I had the oportunity to visit many countries and discover news cultures, which enabled me to improve
+                  my language skills in English and Spanish.'
+    title2: 'My cursus'
+    cursus1: 'After many years in the logistics fiels and much consideration on the direction of my life,
+             I decided to change of way and become a web developper. Followings 1 year of training,
+             internship and project, i acquired my degree as FullStack Web Developer in 2023.'
+    cursus2: 'It is a new area i learned to love and i really enjoy practicing every day.'
+    cv: 'My CV'

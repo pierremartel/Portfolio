@@ -1,19 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Skills{% endblock %}
+{% trans_default_domain 'skills_content' %}
+
+{% block title %}{{ 'skills.page.mainTitle'| trans }}{% endblock %}
 
 {% block body %}
 
 <section class="container max-w-5xl mx-auto py-8 flex h-screen dark:text-white">
     <div class="">
         <div class="">
-            <h1 class="text-3xl font-semibold text-gray-500">Ce que je sais faire</h1>
-            <h2 class="text-7xl font-black">Skills</h2>
+            <h1 class="text-3xl font-semibold text-gray-500">{{ 'skills.page.subtitle'| trans }}</h1>
+            <h2 class="text-7xl font-black">{{ 'skills.page.title'| trans }}</h2>
         </div>
         <div class="mr-16 text-lg leading-8 my-10">
-            <p>De part mes formations et mes connaissances
-            personnelle, j’ai pu acquérir un certain niveau 
-            de compétences techniques dont voici un aperçu :
+            <p>{{ 'skills.page.text'| trans }}
             </p>
         </div>
         <div>
