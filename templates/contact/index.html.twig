@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% trans_default_domain 'contact_content' %}
+
+{% block title %}{{ 'contact.page.mainTitle'| trans }}{% endblock %}
+
+{% form_theme form 'tailwind_2_layout.html.twig' %}
+
+{% block body %}
+
+<section class="container max-w-5xl mx-auto py-8 flex justify-between h-screen dark:text-white">
+
+    <div class="h-auto">
+        <div class="">
+            <h1 class="text-3xl font-semibold text-gray-500">{{ 'contact.page.subtitle'| trans }}</h1>
+            <h2 class="text-7xl font-black">{{ 'contact.page.title'| trans }}</h2>
+        </div>
+        <div class="mt-16 ">
+            <h3 class="mt-5 text-center text-xl">{{ 'contact.page.formTitle'| trans }}</h3>
+
+            {{ form_start(form) }}
+
+            <div class="flex mt-3">
+                <div class="mr-2">
+                    {{ form_widget(form.name, {
+                        widget_class: 'p-2'
+                    }) }}
+                </div>
+                <div>
+                    {{ form_widget(form.email, {
+                        widget_class: 'p-2'
+                    }) }}
+                </div>
+            </div>
+            <div class="mt-2">
+                {{ form_widget(form.message, {
+                    widget_class: 'w-full p-2'
+                }) }}
+            </div>
+
+            {{ form_end(form) }}
+
+            <div class="text-right mt-3">
+                <button type="submit" class="bg-black text-white px-6 py-2 rounded-full">{{ 'contact.page.button'| trans }}</button>
+            </div>
+            
+        </div>
+
+        <div class="mt-20">
+            <a href="mailto:pmartel502@gmail.com" class="text-md bg-orange-400 py-2 px-4">Pmartel502@gmail.com</a>
+        </div>
+        
+    </div>
+
+    <aside class="">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d649499.198678447!2d1.8101347624304112!3d50.51358993280788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dd050b98f12af7%3A0x30af13e81612960!2sPas-de-Calais!5e0!3m2!1sfr!2sfr!4v1679589414681!5m2!1sfr!2sfr" width="550" height="700" aria-hidden="true" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        {# <img src="" alt=""  class="rounded-lg h-96 object-cover"> #}
+        {# <img src="" alt=""  class="rounded-lg h-96 object-cover"> #}
+        
+        
+    </aside>
+
+</section>
+
+{% endblock %}

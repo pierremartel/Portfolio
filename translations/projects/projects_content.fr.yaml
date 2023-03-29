@@ -1,0 +1,8 @@
+projects:
+  page:
+    mainTitle: 'Projets'
+    subtitle: 'Mes projets'
+    title: 'Portfolio'
+    text: 'Evolution-fit est un magasin en ligne où les utilisateurs peuvent se connecter, parcourir les catégories,
+          choisir des produits en les plaçant dans leur panier et enfin passer la commande.'
+    button: 'Voir DEMO'

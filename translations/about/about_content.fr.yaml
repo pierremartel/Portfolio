@@ -1,0 +1,16 @@
+about:
+  page:
+    mainTitle: 'A propos'
+    subtitle: 'Qui suis-je?'
+    title1: 'Moi'
+    presentation1: 'Je me présente, moi c’est Pierre Martel, 31ans, développeur web junior fullstack 
+                  depuis maintenant 1ans, avec une préférence pour le back-end et Symfony.'
+    presentation2: 'Je suis un passionné d’informatique et de sport dans mon temps libre. J’aime beaucoup voyager à l’étranger.
+                   J’ai notamment pu visiter un grand nombre de pays et découvert de nouvelles culture, ce qui m’a permis
+                    d’améliorer mes compétences linguistiques en anglais et en espagnol.'
+    title2: 'Mon parcours'
+    cursus1: 'Après plusieurs années dans le domaine de la logistique et une mûre réflexion sur mon orientation futur,
+             j’ai décidé de me reconvertir dans le monde du numérique pour devenir développeur web. A la suite d’un an
+              de formation, stage et projets, j’obtenais mon diplôme de Développeur web FullStack en 2023.'
+    cursus2: 'C’est un domaine que j’ai appris à aimer et dont je prend un réel plaisir à pratiquer chaque jour.'
+    cv: 'Mon CV'

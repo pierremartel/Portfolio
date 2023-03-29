@@ -1,0 +1,8 @@
+projects:
+  page:
+    mainTitle: 'Projects'
+    subtitle: 'My projects'
+    title: 'Portfolio'
+    text: 'Evolution-fit is an online store that allows users to log in, browse through multiple categories of products,
+          pick out products and them to cart and complete the purchase.'
+    button: 'Live DEMO'

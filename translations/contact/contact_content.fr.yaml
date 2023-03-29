@@ -1,0 +1,8 @@
+contact:
+  page:
+    mainTitle: 'Contact'
+    subtitle: 'Mes coordonnées'
+    title: 'Contact'
+    formTitle: 'Ne soie pas timide, dit bonjour !'
+    name: 'Nom'
+    button: 'Envoyer message'
