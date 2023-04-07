@@ -21,4 +21,18 @@ class ProjetsController extends AbstractController
             'controller_name' => 'ProjetsController',
         ]);
     }
+
+
+    /**
+     * @Route({
+     *      "en": "/projects/evolution-fit",
+     *      "fr": "/projets/evolution-fit"     
+     * }
+     * , name="projets_details")
+     */
+    public function detailsProjects(): Response
+    {
+        return $this->render('projets/details.html.twig', [
+        ]);
+    }
 }

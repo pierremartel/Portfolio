@@ -1,12 +1,7 @@
-{# {% extends 'base.html.twig' %}
-
 {% trans_default_domain 'about_content' %}
 
-{% block title %}{{ 'about.page.mainTitle' | trans }}{% endblock %}
-
-{% block body %}
-
-  <section class="container max-w-5xl py-16 mx-auto dark:text-white">
+<main class="container max-w-full pt-8 pb-4 dark:bg-zinc-800 inclined_bg">
+  <section class="container max-w-6xl mb-20 mx-auto dark:text-white">
     <div class="profil__me shadow-2xl shadow-transparent rounded-md">
       <div class="profil__me_title pl-8">
         <h1 class="text-3xl font-semibold text-gray-500">{{ 'about.page.subtitle' | trans }}</h1>
@@ -14,8 +9,8 @@
       </div>
       <div class="flex justify-between profil__me_content mt-10  h-96 ">
         <div class=" text-lg leading-8 mr-16  p-10 z-0">
-          <p class="mb-6 text-justify">{{ 'about.page.presentation1' | trans }}</p>
-          <p class="text-justify">{{ 'about.page.presentation2' | trans }}</p>
+          <p class="mb-6 text-justify font-medium">{{ 'about.page.presentation1' | trans }}</p>
+          <p class="text-justify font-medium">{{ 'about.page.presentation2' | trans }}</p>
         </div>
         <div class="profil__me_picture z-40 rounded-md">
           <img src="../img/profile_img2.jpg" alt="photo visage" class="rounded-lg">
@@ -29,8 +24,8 @@
       </div>
       <div class="flex flex-row-reverse profil__parcours_content h-96">
         <div class="ml-16 text-lg leading-8 p-10">
-          <p class="mb-6 text-justify">{{ 'about.page.cursus1' | trans }}</p>
-          <p class="text-justify">{{ 'about.page.cursus2' | trans }}</p>
+          <p class="mb-6 text-justify font-medium">{{ 'about.page.cursus1' | trans }}</p>
+          <p class="text-justify font-medium">{{ 'about.page.cursus2' | trans }}</p>
         </div>
         <div class="profil__parcours_picture rounded-md pt-8">
           <img src="../img/profile_img1.jpg" alt="photo ordinateur" class="rounded-lg">
@@ -40,9 +35,8 @@
 
     <hr class="my-5 w-6/12 mx-auto">
 
-    <button class=" px-10 py-3 bg-orange-500 text-white font-semibold rounded text-xl">{{ 'about.page.cv' | trans }}</button>
+    <button class="cv px-7 py-2 outline outline-offset-0 outline-amber-600 hover:text-black text-amber-600 rounded tracking-widest font-medium text-sm uppercase"><span>{{ 'about.page.cv' | trans }}</span></button>
 
 
   </section>
-
-{% endblock %} #}
+</main>

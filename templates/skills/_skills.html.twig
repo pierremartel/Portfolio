@@ -1,19 +1,15 @@
-{% extends 'base.html.twig' %}
 
 {% trans_default_domain 'skills_content' %}
 
-{% block title %}{{ 'skills.page.mainTitle'| trans }}{% endblock %}
 
-{% block body %}
-
-<section class="container max-w-5xl mx-auto py-16 flex h-screen dark:text-white">
+<section class="container max-w-6xl mx-auto pt-8 pb-4 flex h-screen dark:text-white">
     <div class="">
         <div class="">
             <h1 class="text-3xl font-semibold text-gray-500">{{ 'skills.page.subtitle'| trans }}</h1>
             <h2 class="text-7xl font-black">{{ 'skills.page.title'| trans }}</h2>
         </div>
         <div class="mr-16 text-lg leading-8 my-10">
-            <p>{{ 'skills.page.text'| trans }}
+            <p class="font-medium">{{ 'skills.page.text'| trans }}
             </p>
         </div>
         <div>
@@ -43,5 +39,3 @@
     </aside>    
 
 </section>
-
-{% endblock %}
