@@ -1,0 +1,65 @@
+{% trans_default_domain 'contact_content' %}
+
+{% form_theme form 'tailwind_2_layout.html.twig' %}
+
+<section class="container max-w-6xl mx-auto pt-8 mb-40 h-screen dark:text-white">
+
+    <div class="h-auto">
+        <div class="">
+            <h1 class="text-3xl font-semibold text-gray-500">{{ 'contact.page.subtitle'| trans }}</h1>
+            <h2 class="text-7xl font-black">{{ 'contact.page.title'| trans }}</h2>
+        </div>
+
+        <div class="flex justify-between">
+        
+            <div class="mt-16 w-3/4">
+                
+                <h3 class="mt-5 text-center text-xl font-medium">{{ 'contact.page.formTitle'| trans }}</h3>
+
+                {{ form_start(form) }}
+
+                {# <div class="flex mt-3 text-black"> #}
+                    <div class="mt-4">
+                        {{ form_widget(form.name, {
+                            widget_class: 'w-full p-2 rounded'
+                        }) }}
+                        </div>
+                    <div class="mt-2">
+                        {{ form_widget(form.email, {
+                            widget_class: 'w-full p-2 rounded'
+                        }) }}
+                    </div>
+                {# </div> #}
+                <div class="mt-2 text-black">
+                    {{ form_widget(form.company, {
+                        widget_class: 'w-full p-2 rounded'
+                    }) }}
+                </div>
+                <div class="mt-2 text-black">
+                    {{ form_widget(form.message, {
+                        widget_class: 'w-full p-2 rounded'
+                    }) }}
+                </div>
+
+                {# ANIMATION BTN  #}
+                {# outline outline-white text-white px-7 py-3 rounded #}
+                <div class="text-right mt-3">
+                    <button type="submit" class="rounded animated-button1 dark:text-white text-black tracking-widest font-medium text-md ">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    {{ 'contact.page.button'| trans }}
+                    </button>
+                </div>
+                {{ form_end(form) }}
+
+            </div>
+
+            <aside class="mb-16 ml-16">
+                {# <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d649499.198678447!2d1.8101347624304112!3d50.51358993280788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dd050b98f12af7%3A0x30af13e81612960!2sPas-de-Calais!5e0!3m2!1sfr!2sfr!4v1679589414681!5m2!1sfr!2sfr" width="550" height="700" aria-hidden="true" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> #}
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81350.13320134612!2d2.8881903372951436!3d50.418900574091644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dd33143e8095ab%3A0xf539fc766a47c36e!2sH%C3%A9nin-Beaumont!5e0!3m2!1sfr!2sfr!4v1680446179789!5m2!1sfr!2sfr" width="500" height="700" aria-hidden="true" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </aside>
+        </div>
+    </div>
+</section>

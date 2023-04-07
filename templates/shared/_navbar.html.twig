@@ -1,82 +1,72 @@
 {% trans_default_domain 'nav_content' %}
 
-<nav class="navbar navbar-expand-lg shadow-md py-2  bg-blue-800 dark:bg-slate-800 text-white relative flex flex-col h-auto">
-	<div class="mb-12 text-center flex flex-col items-center">
+{# MENU BURGER ----- #}
+<div class="navbar__menu_burger z-40">
+	<button class="burger_box b1">
+		<div class="container-lignes">
+			<div class="line dark:bg-white bg-black"></div>
+			<div class="line dark:bg-white bg-black"></div>
+			<div class="line dark:bg-white bg-black"></div>
+		</div>
+	</button>
+</div>
+
+
+<nav class="navbar navbar-expand-lg shadow-md w-36 min-w-24 pt-48 bg-zinc-400 dark:bg-transparent text-white flex flex-col h-screen fixed top-0 right-0">
+	
+	{# <div class="mb-28 text-center bg-transparent">
 		<a href="{{ path('home') }}" class="relative inset-x-1/4">
 			<img src="../../img/logo.png" width="50%" height="50%" alt="Photo de logo">
 		</a>
-		<span>{{ 'nav.title'| trans }}</span>
-		<span class="bg-amber-600 p-1 rounded-lg">Junior</span>
-	</div>
+	</div> #}
 
 	<div class="text-center">
 		<ul>
-			<li class="outline outline-1 py-3 hover:bg-sky-600 active:bg-sky-700 ">
-				<a href="{{ path('about') }}" class="" >{{ 'nav.element1'| trans }}</a>
+			<li class=" py-3 ">
+				<a href="{{ path('about') }}" class="hover:text-amber-600 " >{{ 'nav.element1'| trans }}</a>
 			</li>
-			<li class="outline outline-1 py-3 hover:bg-sky-600 ">
-				<a href="{{ path('skills') }}">{{ 'nav.element2'| trans }}</a>
+			<li class=" py-3">
+				<a href="{{ path('skills') }}" class="hover:text-amber-600">{{ 'nav.element2'| trans }}</a>
 			</li>
-			<li class="outline outline-1 py-3 hover:bg-sky-600 ">
-				<a href="{{ path('projets') }}">{{ 'nav.element3'| trans }}</a>
+			<li class=" py-3">
+				<a href="{{ path('projets') }}" class="hover:text-amber-600">{{ 'nav.element3'| trans }}</a>
 			</li>
-			<li class="outline outline-1 py-3 hover:bg-sky-600 ">
-				<a href="{{ path('contact') }}">{{ 'nav.element4'| trans }}</a>
+			<li class=" py-3">
+				<a href="{{ path('contact') }}" class="hover:text-amber-600">{{ 'nav.element4'| trans }}</a>
 			</li>
 		</ul>
 	</div>
 
-	<div class="mt-2 text-black flex flex-col items-center">
-		{# <select name="" id="" class="text-center mb-2">
-			<option value="" selected>
-				FR
-			</option>
-			<option value="">
-				ENG
-			</option>
-			<option value="">
-				PT
-			</option>
-		</select> #}
+	<hr class="w-1/2 mx-auto mt-4">
 
-		<ul>
+	<div class="mt-2 text-black text-center ">
+		<div class="text-center relative left-1/2">
+
 			{# Affichage drapeaux des langues #}
-			{# {% for locale in locales %} #}
-				{# {% if locale != app.request.getLocale() %} #}
-				{# {% if locale != app.request.locale() %} #}
-					{# <li>
-						<a href="#"><img src="{{ asset('img/en.png') }}" alt="en" class="w-8 h-8"></a>
-					</li> #}
-				{# {% endif %} #}
-			{# {% endfor %} #}
-
 			{{ readInThisLanguageButton(app.request.getLocale()) }}
 
-		</ul>
-
-		<button class="mt-3">
-			<i class="fa-solid fa-moon moon"></i>
-            <i class="fa-regular fa-lightbulb sun text-white"></i>
-		</button>
+		</div>
 	</div>
-
-	<div class="mt-28">
-		<ul class="flex justify-around">
-			<li>
-				<a href="">
-					<i class="fa-brands fa-github fa-2xl"></i>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<i class="fa-brands fa-linkedin fa-2xl"></i>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<span class="text-amber-600 font-black">CV</span>
-				</a>
-			</li>
-		</ul>
+	<div class=" mt-4 flex items-center justify-center ">
+		<div class="text-center relative left-4 w-1/5 bg-white rounded-md ">
+			<button class="">
+				<i class="fa-solid fa-moon moon text-black"></i>
+				<i class="fa-regular fa-lightbulb sun text-black "></i>
+			</button>
+		</div>
 	</div>
 </nav>
+
+
+{% block javascript %}
+    <script type="text/javascript">
+        const box = document.querySelector('.burger_box');
+        const modalbox = document.querySelector('.navbar');
+       
+
+        box.addEventListener('click', e => {
+            e.target.classList.toggle('active_burger');
+            modalbox.classList.toggle('show__modal_burger');
+        })
+    </script>
+{% endblock  %}

@@ -1,0 +1,22 @@
+{% trans_default_domain 'footer_content' %}
+
+<footer class="flex flex-col justify-center items-center py-5 bg-zinc-800">
+    <div class="mb-8">
+        <p class="text-amber-600 text-xl">{{ 'footer.part1.title'| trans }}</p>
+    </div>
+    <div class="flex mb-8 ">
+        <div class="mr-4">
+            <a href="#logo"  class="ml-2 text-gray-400"><i class="fa-solid fa-arrow-up" style="color: #ce631c;"></i>
+            {{ 'footer.part2.title1'| trans }}
+            </a>
+        </div>
+        <div>
+            <a href="mailto:pmartel502@gmail.com" class="ml-2 text-gray-400  "><i class="fa-regular fa-message" style="color: #e66119;"></i> 
+            {{ 'footer.part2.title2'| trans }}
+            </a>
+        </div>
+    </div>
+    <div>
+        <p class="text-gray-500">© 2023 {{ 'footer.part3.title'| trans }}</p>
+    </div>
+</footer>

@@ -3,6 +3,7 @@ contact:
     mainTitle: 'Contact'
     subtitle: 'My contact informations'
     title: 'Contact'
-    formTitle: 'Dont be shy, say hello !'
+    formTitle: 'If you have any questions or comments, send me a message. I will call you through the email you provide me !'
     name: 'Name'
+    company: 'Company name (optional)'
     button: 'Send message'

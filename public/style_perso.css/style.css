@@ -2,93 +2,133 @@
 
 body {
   /* background-color:#f4c5c5; */
+  /* background: linear-gradient(0deg,rgb(24, 24, 27) 35%, rgba(63, 63, 70) 65%); */
   font-family: 'Montserrat', sans-serif;
 }
 
+/* .main_home {
+  background: linear-gradient(0deg, rgba(39, 39, 42) 35%, rgb(24, 24, 27) 65%);
 
-/* Animation Mouse MainPage */
+} */
 
-.mouse_move {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* .inclined_bg:before {
+    content: "";
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    transform: rotate(10deg);
+} */
+
+ .navbar {
+  display: none!important;
 }
 
-.scrollDown {
-  width: 45px;
-  height: 70px;
-  border: #000 solid 2px;
-  border-radius: 30px;
-  display: flex;
-  justify-content: center;
+.show__modal_burger {
+  display: block!important;
+} 
+
+
+/* MENU BURGER ---------------------------------------------- */
+
+.navbar__menu_burger {
+  position: fixed;
+  top: 5%;
+  right: 3%;
 }
 
-.scrollDown span {
-  background-color: #000;
-  width: 5px;
-  height: 10px;
-  border-radius: 30px;
-  margin-top: 10px;
+.burger_box {
+  z-index: 10000;
+  background: transparent;
+  /* background: #faf6f7; */
+  width: 50px;
+  height: 40px;
+  /* border:none; */
+  /* border: #000 1px solid; */
+  cursor:pointer;
+  border-radius: 5px;
   position: relative;
 }
 
-.scrollDown span::before {
+.container-lignes {
+  /* background-color: #AE8E1C; */
+  width: 40px;
+  height: 20px;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.line {
   position: absolute;
-  content: '';
-  width: 15px;
-  height: 15px;
-  border: none;
-  border-right: 2px solid #000;
-  border-top: 2px solid #000;
-  transform: translateY(-10px) rotate(135deg);
-  left: -6px;
-  margin-top: 10px;
+  border-radius: 10px;
+  width: 40px;
+  height: 2px;
+  background-color: #fcf8f8;
+  /* background: #000 */
+
+}
+
+.burger_box .line:nth-child(1){
+  top:0px;
+}
+.burger_box .line:nth-child(2){
+  top:9px;
+}
+.burger_box .line:nth-child(3){
+  top:18px;
+}
+
+.b1 .line:nth-child(1), .line:nth-child(3) {
+  transform:rotate(0deg);
+  transition: transform 0.4s ease-in-out, top 0.4s 0.4s ease-in-out;
+}
+
+.b1 .line:nth-child(2){
+  transition: opacity 0.4s 0.4s ease-in-out;
+
+}
+
+.b1.active_burger .line:nth-child(1){
+  top: 9px;
+  transform: rotate(45deg);
+  transition: top 0.4s ease-in-out, transform 0.4s 0.4s ease-in-out;
+}
+.b1.active_burger .line:nth-child(2){
+  transition: opacity 0.4s ease-in-out;
   opacity: 0;
-  animation: ani 1.8s infinite linear;
+}
+.b1.active_burger .line:nth-child(3){
+  top: 9px;
+  transform: rotate(-45deg);
+  transition: top 0.4s ease-in-out, transform 0.4s 0.4s ease-in-out;
+
 }
 
 
-.scrollDown span::after {
-  position: absolute;
-  content: '';
-  width: 15px;
-  height: 15px;
-  border: none;
-  border-right: 2px solid #000;
-  border-top: 2px solid #000;
-  transform: translateY(-10px) rotate(135deg);
-  left: -6px;
-  margin-top: 10px;
-  opacity: 0;
+/* FIN----------------------------------------------------------- */
 
-  animation: ani 1.8s infinite linear;
-  animation-delay: 0.8s;
+
+/* ANIMATION icon scale */
+.icon_media, .link_project {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
-
-@keyframes ani {
-  0% {
-      margin-top: 10px;
-      opacity: 0;
-  }
-
-  50% {
-      margin-top: 25px;
-      opacity: 1;
-  }
-
-  100% {
-      margin-top: 40px;
-      opacity: 0;
-  }
+.icon_media:hover, .link_project:hover {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
 }
+/* FIN Animation */
 
-/* Fin ANIMATION Mouse */
 
 
 /* About */
 
 .profil__me_picture {
-  width: 600px;
+  width: 800px;
 }
 
 .profil__parcours_picture {
@@ -98,11 +138,10 @@ body {
 
 /* Portofolio Card Pivot ------------------------------------*/
 
-.box_pivot {
+/* .box_pivot {
   background-color: transparent;
   width: 250px;
   height: 320px;
-  /* border: 1px solid #000; */
   perspective: 1000px;
 }
 .box-inner {
@@ -129,12 +168,38 @@ body {
 
 .box_front{
   background-color: rgb(214, 214, 206);
-}
+} */
 
 /* -------------------------------------------------- */
 
-/* input .input_class {
-  background-color: #000;
-} */
+/* BOUTON CONTACT, CV ANIMATION ---------- */
+
+.contact, .cv{
+  position: relative;
+  transition: all .55s;
+}
+
+.contact span, .cv span{
+  position: relative;
+  z-index: 2;
+}
+
+.contact:after, .cv:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(217, 119, 6);
+  transition: all .55s;
+}
+
+.contact:hover:after, .cv:hover:after{
+  width: 100%;
+}
+
+
+/* BOUTON SEND MESSAGE ANIMATION ------------ */
 
 

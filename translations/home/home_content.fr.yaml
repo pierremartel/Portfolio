@@ -1,5 +1,9 @@
 home:
   page:
     mainTitle: 'Accueil'
-    title: 'Developpeur Web'
-    button: 'Contactez-moi'
+    title1: "Hey, Moi C'est"
+    title2: 'Développeur Web'
+    title3: 'Back-end'
+    title4: 'Spécialiste Symfony'
+    button1: 'Contactez-moi'
+    button2: 'Découvrir'

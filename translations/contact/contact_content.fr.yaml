@@ -3,6 +3,7 @@ contact:
     mainTitle: 'Contact'
     subtitle: 'Mes coordonnées'
     title: 'Contact'
-    formTitle: 'Ne soie pas timide, dit bonjour !'
+    formTitle: "Si vous avez une question ou un commentaire, envoyez moi un message. Je vous contacterai via l'email que vous m'avez fourni !"
     name: 'Nom'
+    company: "Nom d'entreprise (facultatif)"
     button: 'Envoyer message'
