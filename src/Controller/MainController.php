@@ -30,7 +30,7 @@ class MainController extends AbstractController
      *      "fr": "/accueil"     
      * }, name="home")
      */
-    public function home(Request $request, EntityManagerInterface $em)
+    public function home(Request $request, EntityManagerInterface $em): Response
     {
         $contact = new Contact();
 
@@ -39,6 +39,7 @@ class MainController extends AbstractController
         $form->handleRequest($request);
         
         if($form->isSubmitted() && $form->isValid()){
+            // dd($form->getData());
            $em->persist($contact);
            $em->flush();
 

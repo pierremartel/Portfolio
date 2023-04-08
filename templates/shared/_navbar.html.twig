@@ -12,7 +12,7 @@
 </div>
 
 
-<nav class="navbar navbar-expand-lg shadow-md w-36 min-w-24 pt-48 bg-zinc-400 dark:bg-transparent text-white flex flex-col h-screen fixed top-0 right-0">
+<nav class="navbar navbar-expand-lg shadow-md w-36 min-w-24 pt-48 tablet:pt-28 bg-zinc-400 tablet:dark:bg-amber-800 tablet:w-full tablet:h-full dark:bg-transparent text-white flex flex-col h-screen fixed top-0 right-0">
 	
 	{# <div class="mb-28 text-center bg-transparent">
 		<a href="{{ path('home') }}" class="relative inset-x-1/4">
@@ -20,7 +20,7 @@
 		</a>
 	</div> #}
 
-	<div class="text-center">
+	<div class="text-center tablet:text-md">
 		<ul>
 			<li class=" py-3 ">
 				<a href="{{ path('about') }}" class="hover:text-amber-600 " >{{ 'nav.element1'| trans }}</a>
@@ -48,7 +48,7 @@
 		</div>
 	</div>
 	<div class=" mt-4 flex items-center justify-center ">
-		<div class="text-center relative left-4 w-1/5 bg-white rounded-md ">
+		<div class="text-center relative left-4 w-1/5 tablet:w-8 bg-white rounded-md ">
 			<button class="">
 				<i class="fa-solid fa-moon moon text-black"></i>
 				<i class="fa-regular fa-lightbulb sun text-black "></i>

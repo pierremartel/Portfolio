@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    screens: {
+      'tablet': {'max': '1023px'},
+      'mobileM': {'max': '424px'}
+    }
   },
   plugins: [
     require('tw-elements/dist/plugin'),
