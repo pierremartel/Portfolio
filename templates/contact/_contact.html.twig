@@ -2,12 +2,12 @@
 
 {% form_theme form 'tailwind_2_layout.html.twig' %}
 
-<section class="container max-w-6xl tablet:max-w-xl mx-auto pt-8 mb-28 tablet:mb-16 h-full dark:text-white">
+<section class="container max-w-6xl tablet:max-w-xl mx-auto pt-8 mb-28 tablet:mb-16 h-full dark:text-white mobileM:mb-8">
 
-    <div class="h-auto">
+    <div class="h-auto mobileM:p-5">
         <div class="">
-            <h1 class="text-3xl tablet:text-xl font-semibold text-gray-500">{{ 'contact.page.subtitle'| trans }}</h1>
-            <h2 class="text-7xl tablet:text-5xl font-black">{{ 'contact.page.title'| trans }}</h2>
+            <h1 class="text-3xl tablet:text-xl mobileM:text-lg font-semibold text-gray-500">{{ 'contact.page.subtitle'| trans }}</h1>
+            <h2 class="text-7xl tablet:text-5xl mobileM:text-4xl font-black">{{ 'contact.page.title'| trans }}</h2>
         </div>
 
         <div class="flex justify-between tablet:flex-col tablet:justify-start">
@@ -44,7 +44,7 @@
                 {# ANIMATION BTN  #}
                 {# outline outline-white text-white px-7 py-3 rounded #}
                 <div class="text-right mt-3">
-                    <button type="submit" class="rounded animated-button1 dark:text-white text-black tracking-widest font-medium text-md tablet:text-sm ">
+                    <button type="submit" class="rounded animated-button1 dark:text-white text-black tracking-widest font-medium text-md tablet:text-sm mobileM:text-xs ">
                         <span></span>
                         <span></span>
                         <span></span>
