@@ -2,32 +2,32 @@
 
 <main class="container max-w-full pt-8 pb-4 dark:bg-zinc-800 inclined_bg">
   <section class="container max-w-6xl tablet:max-w-xl mb-20 tablet:mb-12 mx-auto dark:text-white">
-    <div class="profil__me shadow-2xl shadow-transparent rounded-md ">
+    <div class="profil__me shadow-2xl shadow-transparent rounded-md mobileM:pb-8 mobileM:p-5">
       <div class="profil__me_title pl-8 tablet:pl-0">
-        <h1 class="text-3xl tablet:text-xl font-semibold text-gray-500">{{ 'about.page.subtitle' | trans }}</h1>
-        <h2 class="text-7xl tablet:text-5xl font-black">{{ 'about.page.title1' | trans }}</h2>
+        <h1 class="text-3xl tablet:text-xl mobileM:text-lg font-semibold text-gray-500">{{ 'about.page.subtitle' | trans }}</h1>
+        <h2 class="text-7xl tablet:text-5xl mobileM:text-4xl font-black">{{ 'about.page.title1' | trans }}</h2>
       </div>
-      <div class="flex justify-between profil__me_content mt-10  h-96 tablet:h-80">
-        <div class=" text-lg leading-8 mr-16 tablet:mr-12 p-10 tablet:p-0">
+      <div class="flex justify-between mobileM:flex-col-reverse mobileM:items-center mt-10 h-96 tablet:h-80 mobileM:h-auto">
+        <div class=" text-lg leading-8 mr-16 tablet:mr-12 p-10 tablet:p-0 mobileM:mt-4 mobileM:mr-4">
           <p class="mb-6 text-justify tablet:text-sm font-medium">{{ 'about.page.presentation1' | trans }}</p>
           <p class="text-justify tablet:text-sm font-medium">{{ 'about.page.presentation2' | trans }}</p>
         </div>
-        <div class="profil__me_picture rounded-md">
+        <div class="profil__me_picture rounded-md mobileM:w-5/12 mobileM:pt-0">
           <img src="../img/profile_img2.jpg" alt="photo visage" class="rounded-lg">
         </div>
       </div>
     </div>
 
-    <div class="profil__parcours mt-8 tablet:mt-4 shadow-2xl shadow-transparent rounded-md ">
-      <div class="profil__parcours_title text-right mb-8">
-        <h2 class="text-7xl tablet:text-5xl font-black">{{ 'about.page.title2' | trans }}</h2>
+    <div class=" mt-8 mobileM:pb-8 mobileM:p-5 tablet:mt-4 shadow-2xl shadow-transparent rounded-md">
+      <div class="profil__parcours_title text-right mb-8 mobileM:mr-4">
+        <h2 class="text-7xl tablet:text-5xl mobileM:text-4xl font-black">{{ 'about.page.title2' | trans }}</h2>
       </div>
-      <div class="flex flex-row-reverse profil__parcours_content h-96 tablet:h-80">
-        <div class="ml-16 tablet:ml-0 text-lg leading-8 p-10 tablet:p-0">
+      <div class="flex flex-row-reverse mobileM:flex-col-reverse mobileM:items-center h-96 tablet:h-80 mobileM:h-auto">
+        <div class="ml-16 tablet:ml-0 text-lg leading-8 p-10 tablet:p-0 mobileM:mt-4 mobileM:mr-4">
           <p class="mb-6 text-justify tablet:text-sm font-medium">{{ 'about.page.cursus1' | trans }}</p>
           <p class="text-justify tablet:text-sm font-medium">{{ 'about.page.cursus2' | trans }}</p>
         </div>
-        <div class="profil__parcours_picture rounded-md pt-8 tablet:pt-0 tablet:mr-12">
+        <div class="profil__parcours_picture rounded-md pt-8 tablet:pt-0 tablet:mr-12 mobileM:w-8/12 mobileM:h-3/12 mobileM:ml-8">
           <img src="../img/profile_img1.jpg" alt="photo ordinateur" class="rounded-lg">
         </div>
       </div>
@@ -35,7 +35,7 @@
 
     <hr class="my-5 w-6/12 mx-auto">
 
-    <button class="cv px-7 py-2 tablet:px-5 tablet:py-1 outline outline-offset-0 outline-amber-600 hover:text-black text-amber-600 rounded tracking-widest font-medium text-sm uppercase"><span>{{ 'about.page.cv' | trans }}</span></button>
+    <button class="cv px-7 py-2 tablet:px-5 tablet:py-1 mobileM:ml-6 outline outline-offset-0 outline-amber-600 hover:text-black text-amber-600 rounded tracking-widest font-medium text-sm uppercase"><span>{{ 'about.page.cv' | trans }}</span></button>
 
 
   </section>

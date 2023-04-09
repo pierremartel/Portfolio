@@ -15,24 +15,25 @@
     </a>
 </div>
 
-<main class="container max-w-6xl tablet:max-w-xl mx-auto pt-10 pb-8 tablet:pb-16">
+<main class="container max-w-6xl tablet:max-w-xl mx-auto pt-10 pb-8 tablet:pb-16" >
+    <div class="mobileM:p-5">
         <section class="flex justify-center items-center">
-            <div class="w-3/5 tablet:w-3/4 text-center flex flex-col justify-center items-center">
+            <div class="w-3/5 tablet:w-3/4 text-center flex flex-col justify-center items-center mobileM:w-full">
                 <img src="{{ asset('img/mockup.png') }}" alt="Mockup du site" class="">
                 <a href="https://evolution-fit.website/" target="_blank" class="link_project mb-2">
-                    <h1 class="text-2xl tablet:text-xl text-white tracking-widest">Evolution-Fit</h1>
+                    <h1 class="text-2xl tablet:text-xl mobileM:text-lg text-white tracking-widest">Evolution-Fit</h1>
                 </a>
             </div>
         </section>
         <hr>
-        <section class="bg-gray-800 mt-16 p-8 rounded shadow-lg shadow-black">
+        <section class="bg-gray-800 mt-16 p-8 rounded shadow-lg shadow-black mobileM:p-4">
             <div>
-                <h2 class="text-white text-xl tablet:text-lg font-bold ">Description :</h2>
+                <h2 class="text-white text-xl tablet:text-lg mobileM:text-md font-bold ">Description :</h2>
                 <p class="mt-5 text-white text-lg tablet:text-sm text-justify font-medium leading-8">{{ 'projects.page.text'| trans }}</p>
             </div>
         </section>
-        <section class="bg-gray-800 mt-16 p-8 rounded shadow-lg shadow-black">
-            <h2 class="text-white text-xl tablet:text-lg font-bold mb-4">Technologies :</h2>
+        <section class="bg-gray-800 mt-16 p-8 rounded shadow-lg shadow-black mobileM:p-4 mobileM:mt-10">
+            <h2 class="text-white text-xl tablet:text-lg mobileM:text-md font-bold mb-4">Technologies :</h2>
             <div class=" flex justify-start tablet:flex-wrap tablet:text-sm">
                 <div class="flex flex-col justify-center items-center mr-3 tablet:my-2">
                     <div class=" rounded bg-zinc-700 p-2 flex justify-center text-white">
@@ -79,6 +80,7 @@
                 
             </div>
         </section>
+    </div>
 </main>
 
 {% endblock %}
