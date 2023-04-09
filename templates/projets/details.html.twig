@@ -15,71 +15,70 @@
     </a>
 </div>
 
-<main class="container max-w-6xl mx-auto pt-10 pb-8">
-    <section class="w-full flex justify-center items-center">
-        <div class="w-3/5 text-center flex flex-col justify-center items-center">
-            <img src="{{ asset('img/mockup.png') }}" alt="Mockup du site" class="">
-            <a href="https://evolution-fit.website/" target="_blank" class="link_project mb-2">
-                <h1 class="text-2xl text-white tracking-widest">Evolution-Fit</h1>
-            </a>
-        </div>
-    </section>
-    <hr>
-    <section class="bg-gray-800 mt-16 p-8 rounded shadow-lg shadow-black">
-        <div>
-            <h2 class="text-white text-xl font-bold ">Description :</h2>
-            <p class="mt-5 text-white text-lg text-justify font-medium leading-8">{{ 'projects.page.text'| trans }}</p>
-        </div>
-    </section>
-    <section class="bg-gray-800 mt-16 p-8 rounded shadow-lg shadow-black">
-        <h2 class="text-white text-xl font-bold mb-4">Technologies :</h2>
-        <div class=" flex justify-start">
-            <div class="flex flex-col justify-center items-center mr-3">
-                <div class=" rounded bg-zinc-700 p-2 flex justify-center text-white">
-                    <p class="">Bootstrap</p>
-                </div>
+<main class="container max-w-6xl tablet:max-w-xl mx-auto pt-10 pb-8 tablet:pb-16">
+        <section class="flex justify-center items-center">
+            <div class="w-3/5 tablet:w-3/4 text-center flex flex-col justify-center items-center">
+                <img src="{{ asset('img/mockup.png') }}" alt="Mockup du site" class="">
+                <a href="https://evolution-fit.website/" target="_blank" class="link_project mb-2">
+                    <h1 class="text-2xl tablet:text-xl text-white tracking-widest">Evolution-Fit</h1>
+                </a>
             </div>
-
-            <div class="flex flex-col justify-center items-center mr-3">
-                <div class=" rounded bg-white p-2 flex justify-center">
-                    <p class="">Hostinger</p>
-                </div>
+        </section>
+        <hr>
+        <section class="bg-gray-800 mt-16 p-8 rounded shadow-lg shadow-black">
+            <div>
+                <h2 class="text-white text-xl tablet:text-lg font-bold ">Description :</h2>
+                <p class="mt-5 text-white text-lg tablet:text-sm text-justify font-medium leading-8">{{ 'projects.page.text'| trans }}</p>
             </div>
-
-            <div class="flex flex-col justify-center items-center mr-3">
-                <div class=" rounded bg-zinc-700 text-white p-2 flex justify-center">
-                    <p class="">JavaScript</p>
+        </section>
+        <section class="bg-gray-800 mt-16 p-8 rounded shadow-lg shadow-black">
+            <h2 class="text-white text-xl tablet:text-lg font-bold mb-4">Technologies :</h2>
+            <div class=" flex justify-start tablet:flex-wrap tablet:text-sm">
+                <div class="flex flex-col justify-center items-center mr-3 tablet:my-2">
+                    <div class=" rounded bg-zinc-700 p-2 flex justify-center text-white">
+                        <p class="">Bootstrap</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="flex flex-col justify-center items-center mr-3">
-                <div class=" rounded bg-white p-2 flex justify-center">
-                    <p class="">PHP</p>
+
+                <div class="flex flex-col justify-center items-center mr-3 tablet:my-2">
+                    <div class=" rounded bg-white p-2 flex justify-center">
+                        <p class="">Hostinger</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="flex flex-col justify-center items-center mr-3">
-                <div class=" rounded bg-zinc-700 text-white p-2 flex justify-center">
-                    <p class="">Symfony</p>
+                <div class="flex flex-col justify-center items-center mr-3 tablet:my-2">
+                    <div class=" rounded bg-zinc-700 text-white p-2 flex justify-center">
+                        <p class="">JavaScript</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="flex flex-col justify-center items-center mr-3">
-                <div class=" rounded bg-white p-2 flex justify-center">
-                    <p class="">Stripe API</p>
+                
+                <div class="flex flex-col justify-center items-center mr-3 tablet:my-2">
+                    <div class=" rounded bg-white p-2 flex justify-center">
+                        <p class="">PHP</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="flex flex-col justify-center items-center mr-3">
-                <div class=" rounded bg-zinc-700 text-white p-2 flex justify-center">
-                    <p class="">MySQL</p>
+                <div class="flex flex-col justify-center items-center mr-3 tablet:my-2">
+                    <div class=" rounded bg-zinc-700 text-white p-2 flex justify-center">
+                        <p class="">Symfony</p>
+                    </div>
                 </div>
+
+                <div class="flex flex-col justify-center items-center mr-3 tablet:my-2">
+                    <div class=" rounded bg-white p-2 flex justify-center">
+                        <p class="">Stripe API</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center items-center mr-3 tablet:my-2">
+                    <div class=" rounded bg-zinc-700 text-white p-2 flex justify-center">
+                        <p class="">MySQL</p>
+                    </div>
+                </div>
+
+                
             </div>
-
-            
-        </div>
-    </section>
-
+        </section>
 </main>
 
 {% endblock %}

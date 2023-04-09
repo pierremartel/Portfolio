@@ -1,54 +1,33 @@
 {% trans_default_domain 'projects_content' %}
 
 <main class="container max-w-full pt-8 pb-4 dark:bg-zinc-800 inclined_bg">
-    <section class="container max-w-6xl mx-auto h-auto dark:text-white mb-28">
+    <section class="container max-w-6xl tablet:max-w-xl mx-auto h-auto dark:text-white mb-28 tablet:mb-16">
         <div>
             <div>
-                <h1 class="text-3xl font-semibold text-gray-500">{{ 'projects.page.subtitle'| trans }}</h1>
-                <h2 class="text-7xl font-black">{{ 'projects.page.title'| trans }}</h2>
+                <h1 class="text-3xl tablet:text-xl font-semibold text-gray-500">{{ 'projects.page.subtitle'| trans }}</h1>
+                <h2 class="text-7xl tablet:text-5xl font-black">{{ 'projects.page.title'| trans }}</h2>
             </div>
         </div>
 
-        <div class="mt-10 box_pivot">
-            <div class="box-inner">
-                <div class="box_front">
-                    {# <div class="p-2">
-                        <h2>Evolution-fit -- <span class="font-semibold">E-commerce</span></h2>
-                    </div> #}
-                    <div class="mt-2 w-1/3 rounded bg-white shadow-lg shadow-black">
+        <div class="mt-10">
+            <div class="">
+                <div class="">
+                    <div class="mt-2 w-1/3 tablet:w-1/2 rounded bg-white shadow-lg shadow-black">
                         
                         <img src="../../img/mockup_1.jpg" alt="Photo d'accueil du site">
-                        
-                        {# <p>Evolution-fit est un magasin en ligne où les utilisateurs peuvent se connecter, parcourir les catégories,
-                        choisir des produits en les plaçant dans leur panier et enfin passer la commande.</p> #}
-                        {# <div class="mt-5 text-center">
-                            <h3 class="font-semibold">Technologies: </h3>
-
-                            <span class="bg-slate-400 rounded-xl m-1 w-4 h-1 text-sm p-1">Javascript</span><span class="bg-slate-400 rounded-xl m-1  w-4 h-1 text-sm p-1">PHP</span><span class="bg-slate-400 rounded-xl m-1 w-4 h-1 text-sm p-1">MySQL</span>
-                            <span class="bg-slate-400 rounded-xl m-1 w-4 h-1 text-sm p-1">Symfony</span><span class="bg-slate-400 rounded-xl m-1  w-4 h-1 text-sm p-1">Bootstrap</span><span class="bg-slate-400 rounded-xl m-1 w-4 h-1 text-sm p-1">Mailtrap</span><br/>
-                            <span class="bg-slate-400 rounded-xl m-1 w-4 h-1 text-sm p-1">Stripe API</span><span class="bg-slate-400 rounded-xl m-1  w-4 h-1 text-sm p-1">Hostinger</span>
-                            
-                        </div> #}
-
-                        <div class="p-2 flex justify-around">
+                        <div class="p-2 flex justify-around tablet:flex-col tablet:items-center">
                             <div>
-                                <h2 class="text-black font-bold text-2xl">Evolution-fit</h2>
-                                <h3 class="text-gray-500 font-bold text-lg">E-commerce</h3>
+                                <h2 class="text-black font-bold text-2xl tablet:text-xl">Evolution-fit</h2>
+                                <h3 class="text-gray-500 font-bold text-lg tablet:text-sm">E-commerce</h3>
                             </div>
 
                             <div class="flex justify-start mt-3 p-2">
-                                <a href="{{ path('projets_details') }}" class="bg-amber-600 hover:bg-amber-500 rounded px-3 py-1 mr-3 shadow-md shadow-black font-medium">Details</a>
-                                <a href="https://evolution-fit.website/" target="_blank" class="bg-gray-200 hover:bg-gray-100 rounded px-3 py-1 shadow-md shadow-black text-black font-medium">Demo</a>
+                                <a href="{{ path('projets_details') }}" class="bg-amber-600 hover:bg-amber-500 rounded px-3 py-1 tablet:px-2 tablet:text-sm mr-3 shadow-md shadow-black font-medium">Details</a>
+                                <a href="https://evolution-fit.website/" target="_blank" class="bg-gray-200 hover:bg-gray-100 rounded px-3 py-1 tablet:px-2 tablet:text-sm shadow-md shadow-black text-black font-medium">Demo</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                {# <div class=" box_back text-center bg-blue-800 text-white">
-                    <p class="mt-5">{{ 'projects.page.text'| trans }}</p>
-                    <button class="mt-10 bg-black text-white px-6 y-4 rounded-xl">{{ 'projects.page.button'| trans }}</button>
-                </div> #}
-
-                
 
             </div>    
         </div>
