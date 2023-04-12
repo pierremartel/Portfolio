@@ -8,25 +8,31 @@
 
 {% block body %}
 
-    <header class="mt-6 mb-36 ml-4 tablet:mb-16 mobileM:mb-16" id="logo">
+    <header class="reveal-2 mt-6 mb-36 ml-4 tablet:mb-16 mobileM:mb-16" id="logo">
         <div class="w-1/12 tablet:w-28 mobileM:w-24">
-            <img src="../../img/logo2_light.png" alt="" class="text-black">
+            <img src="../../img/logo3.png" alt="" class="text-black">
         </div>
     </header>
 
     {% include "shared/_info.html.twig" %}
 
+    {# <div class="px-2 py-1 dark:bg-transparent bg-zinc-900 fixed bottom-5 right-5" >
+        <a href="#logo">
+            <i class="fa-solid fa-arrow-up" style="color: #f1f2f3;" id="arrow"></i>
+        </a>
+        
+    </div> #}
 
-    <section class="container max-w-6xl tablet:max-w-xl mx-auto mb-48 tablet:mb-16 mobileM:mb-0 text-center flex justify-center">
+
+    <section class="reveal-1 container max-w-6xl tablet:max-w-xl mx-auto mb-48 tablet:mb-16 mobileM:mb-0 text-center flex justify-center">
         <div class="mb-12 mr-5 mobileM:mb-4">
             <div class="block rounded-lg px-6 py-12">
                 <h1 class="text-6xl tablet:text-4xl mobileM:text-3xl font-bold tracking-tight mb-12 tablet:mb-6 dark:text-white">{{ 'home.page.title1'| trans }}
                     <span class="text-amber-600">P</span>IERRE<br/>{{ 'home.page.title2'| trans }}<br/>{{ 'home.page.title3'| trans }} <br/><span class="text-2xl mobileM:text-xl dark:text-gray-600 text-gray-400 font-semi-bold">{{ 'home.page.title4'| trans }}</span></h1>
                 <a class="tracking-widest contact inline-block px-7 py-3 tablet:px-5 tablet:py-2 mb-2 outline outline-amber-600 text-amber-600 mobileM:text-xs font-medium text-sm uppercase rounded shadow-md hover:text-black hover:shadow-lg z-0" data-mdb-ripple="true" data-mdb-ripple-color="light" href="#!" role="button"><span>{{ 'home.page.button1' | trans }}</span></a>
-                <a class="tracking-widest inline-block m-5 text-white font-medium text-md mobileM:text-xs leading-snug uppercase rounded hover:dark:text-amber-600 hover:text-black hover:dark:bg-transparent hover:bg-gray-400  focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="#!" role="button">{{ 'home.page.button2'| trans }}</a>
+                <a class="tracking-widest inline-block dark:text-white text-black font-medium text-md mobileM:text-xs leading-snug uppercase rounded hover:dark:text-amber-600 hover:text-black hover:dark:bg-transparent hover:bg-gray-400 px-7 py-3" data-mdb-ripple="true" data-mdb-ripple-color="light" href="#!" role="button">{{ 'home.page.button2'| trans }}</a>
             </div>
         </div>
-
     </section>
 
 

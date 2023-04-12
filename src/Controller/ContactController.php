@@ -16,13 +16,13 @@ class ContactController extends AbstractController
      * }
      * , name="contact")
      */
-    public function index(): Response
-    {
-        $form = $this->createForm(ContactType::class);
+    // public function index(): Response
+    // {
+    //     $form = $this->createForm(ContactType::class);
 
 
-        return $this->render('contact/index.html.twig', [
-            'form' => $form->createView(),
-        ]);
-    }
+    //     return $this->render('contact/index.html.twig', [
+    //         'form' => $form->createView(),
+    //     ]);
+    // }
 }

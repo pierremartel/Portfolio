@@ -2,56 +2,60 @@
 
 {% form_theme form 'tailwind_2_layout.html.twig' %}
 
-<section class="container max-w-6xl tablet:max-w-xl mx-auto pt-8 mb-28 tablet:mb-16 h-full dark:text-white mobileM:mb-8">
+<section class=" container max-w-6xl tablet:max-w-xl mx-auto pt-8 mb-28 tablet:mb-16 h-full dark:text-white mobileM:mb-8" id="contact">
 
-    <div class="h-auto mobileM:p-5">
+    <div class="reveal-1 h-auto mobileM:p-5">
         <div class="">
             <h1 class="text-3xl tablet:text-xl mobileM:text-lg font-semibold text-gray-500">{{ 'contact.page.subtitle'| trans }}</h1>
             <h2 class="text-7xl tablet:text-5xl mobileM:text-4xl font-black">{{ 'contact.page.title'| trans }}</h2>
         </div>
 
-        <div class="flex justify-between tablet:flex-col tablet:justify-start">
+        <div class="reveal-2 flex justify-between tablet:flex-col tablet:justify-start">
         
             <div class="mt-16 tablet:mt-10 w-3/4 tablet:w-full tablet:mb-4">
                 
                 <h3 class="mt-5 text-center text-xl tablet:text-sm font-medium">{{ 'contact.page.formTitle'| trans }}</h3>
 
-                {{ form_start(form) }}
 
-                {# <div class="flex mt-3 text-black"> #}
-                    <div class="mt-4 tablet:mt-8 text-black">
-                        {{ form_widget(form.name, {
-                            widget_class: 'w-full p-2 rounded'
-                        }) }}
-                        </div>
-                    <div class="mt-2 text-black">
-                        {{ form_widget(form.email, {
-                            widget_class: 'w-full p-2 rounded'
+                {{ form_start(form, {'attr':{'novalidate':'novalidate' }}) }}
+                
+                {{ form_errors(form) }}
+
+
+                    <div class="mt-4 tablet:mt-8 dark:text-white dark:bg-red-600 text-red-600">
+                        {{ form_row(form.name, {
+                            widget_class: 'w-full p-2 rounded text-black'
                         }) }}
                     </div>
-                {# </div> #}
-                <div class="mt-2 text-black">
-                    {{ form_widget(form.company, {
-                        widget_class: 'w-full p-2 rounded'
-                    }) }}
-                </div>
-                <div class="mt-2 text-black">
-                    {{ form_widget(form.message, {
-                        widget_class: 'w-full p-2 rounded'
-                    }) }}
-                </div>
+                    <div class="mt-2 dark:text-white dark:bg-red-600 text-red-600">
+                        {{ form_row(form.email, {
+                            widget_class: 'w-full p-2 rounded text-black'
+                        }) }}
+                    </div>
 
-                {# ANIMATION BTN  #}
-                {# outline outline-white text-white px-7 py-3 rounded #}
-                <div class="text-right mt-3">
-                    <button type="submit" class="rounded animated-button1 dark:text-white text-black tracking-widest font-medium text-md tablet:text-sm mobileM:text-xs ">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    {{ 'contact.page.button'| trans }}
-                    </button>
-                </div>
+                    <div class="mt-2 dark:text-white dark:bg-red-600 text-red-600">
+                        {{ form_row(form.company, {
+                            widget_class: 'w-full p-2 rounded text-black'
+                        }) }}
+                    </div>
+                    <div class="mt-2 dark:text-white dark:bg-red-600 text-red-600">
+                        {{ form_row(form.message, {
+                            widget_class: 'w-full p-2 rounded text-black'
+                        }) }}
+                    </div>
+
+                    {# ANIMATION BTN  #}
+                    {# outline outline-white text-white px-7 py-3 rounded #}
+                    <div class="text-right mt-3">
+                        <button type="submit" action="" class="rounded animated-button1 dark:text-white text-black tracking-widest font-medium text-md tablet:text-sm mobileM:text-xs ">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        {{ 'contact.page.button'| trans }}
+                        </button>
+                    </div>
+
                 {{ form_end(form) }}
 
             </div>

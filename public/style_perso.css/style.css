@@ -1,23 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Smooth scrolling sur l'entièreté du site */
+body {
+  scroll-behavior:smooth;
+}
+
 body {
   /* background-color:#f4c5c5; */
   /* background: linear-gradient(0deg,rgb(24, 24, 27) 35%, rgba(63, 63, 70) 65%); */
   font-family: 'Montserrat', sans-serif;
 }
-
-/* .main_home {
-  background: linear-gradient(0deg, rgba(39, 39, 42) 35%, rgb(24, 24, 27) 65%);
-
-} */
-
-/* .inclined_bg:before {
-    content: "";
-    position:absolute;
-    top: 0;
-    bottom: 0;
-    transform: rotate(10deg);
-} */
 
  .navbar {
   display: none!important;
@@ -25,7 +17,8 @@ body {
 
 .show__modal_burger {
   display: block!important;
-} 
+}
+
 
 
 /* MENU BURGER ---------------------------------------------- */
@@ -163,6 +156,49 @@ body {
 
 .contact:hover:after, .cv:hover:after{
   width: 100%;
+}
+
+
+/* REVEAL STYLE CLASS ---------------- */
+
+[class*="reveal-"] {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: 1s cubic-bezier(.5, 0, 0, 1)
+}
+
+.reveal-2 {
+  transition-delay: .1s;
+}
+.reveal-3 {
+  transition-delay: .2s;
+}
+.reveal-4 {
+  transition-delay: .3s;
+}
+
+/* FIN ----------  REVEAL STYLE CLASS ---------------- */
+
+
+
+/* ACCESIBILITY --------------------------- */
+
+/* On retire les animations si le navigateur de l'user est configuré de tel sorte */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  [class*="reveal-"] {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 

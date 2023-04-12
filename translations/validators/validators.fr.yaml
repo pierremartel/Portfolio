@@ -1,0 +1,9 @@
+message:
+  name:
+    notBlank: "Votre nom est obligatoire"
+  email:
+    notBlank: "Votre email est obligatoire"
+    email: "Cette valeur n'est pas une adresse email valide."
+  message:
+    notBlank: "Votre message est obligatoire"
+    length: "Votre message doit comporter 5 caractères au minimum "

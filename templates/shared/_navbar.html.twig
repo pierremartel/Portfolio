@@ -1,7 +1,7 @@
 {% trans_default_domain 'nav_content' %}
 
 {# MENU BURGER ----- #}
-<div class="navbar__menu_burger z-40">
+<div class="reveal-3 navbar__menu_burger z-40">
 	<button class="burger_box b1">
 		<div class="container-lignes">
 			<div class="line dark:bg-white bg-black"></div>
@@ -13,26 +13,20 @@
 
 
 <nav class="navbar navbar-expand-lg shadow-md w-36 min-w-24 pt-48 tablet:pt-28 bg-zinc-400 tablet:dark:bg-amber-800 tablet:w-full tablet:h-full dark:bg-transparent text-white flex flex-col h-screen fixed top-0 right-0">
-	
-	{# <div class="mb-28 text-center bg-transparent">
-		<a href="{{ path('home') }}" class="relative inset-x-1/4">
-			<img src="../../img/logo.png" width="50%" height="50%" alt="Photo de logo">
-		</a>
-	</div> #}
 
 	<div class="text-center tablet:text-md">
 		<ul>
 			<li class=" py-3 ">
-				<a href="{{ path('about') }}" class="hover:text-amber-600 " >{{ 'nav.element1'| trans }}</a>
+				<a href="#about" class="hover:text-amber-600 " >{{ 'nav.element1'| trans }}</a>
 			</li>
 			<li class=" py-3">
-				<a href="{{ path('skills') }}" class="hover:text-amber-600">{{ 'nav.element2'| trans }}</a>
+				<a href="#skills" class="hover:text-amber-600">{{ 'nav.element2'| trans }}</a>
 			</li>
 			<li class=" py-3">
-				<a href="{{ path('projets') }}" class="hover:text-amber-600">{{ 'nav.element3'| trans }}</a>
+				<a href="#projects" class="hover:text-amber-600">{{ 'nav.element3'| trans }}</a>
 			</li>
 			<li class=" py-3">
-				<a href="{{ path('contact') }}" class="hover:text-amber-600">{{ 'nav.element4'| trans }}</a>
+				<a href="#contact" class="hover:text-amber-600">{{ 'nav.element4'| trans }}</a>
 			</li>
 		</ul>
 	</div>
