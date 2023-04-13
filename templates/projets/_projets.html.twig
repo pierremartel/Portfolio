@@ -9,28 +9,79 @@
             </div>
         </div>
 
-        <div class="mt-10 reveal-2">
-            <div class="">
-                <div class="">
-                    <div class="mt-2 w-1/3 tablet:w-1/2 mobileM:w-full rounded bg-white shadow-lg shadow-black ">
+        <div class="mt-10 reveal-2 flex mobileM:flex-wrap">
+            {# PROJECT 1 #}
+            <div class="mt-2 w-1/3 tablet:w-1/2 mobileM:w-full rounded bg-white shadow-lg shadow-black mr-4 mobileM:mr-0">
                         
-                        <img src="../../img/mockup_1.jpg" alt="Photo d'accueil du site">
-                        <div class="p-2 flex justify-around tablet:flex-col tablet:items-center">
-                            <div>
-                                <h2 class="text-black font-bold text-2xl tablet:text-xl mobileM:text-lg">Evolution-fit</h2>
-                                <h3 class="text-gray-500 font-bold text-lg tablet:text-sm mobileM:text-xs">E-commerce</h3>
-                            </div>
+                <img src="../../img/mockup_1.jpg" alt="Photo d'accueil du site">
+                <div class="p-2 flex justify-around tablet:flex-col tablet:items-center">
+                    <div>
+                        <h2 class="text-black font-bold text-2xl tablet:text-xl mobileM:text-lg">Evolution-fit</h2>
+                        <h3 class="text-gray-500 font-bold text-lg tablet:text-sm mobileM:text-xs">E-commerce</h3>
+                    </div>
 
-                            <div class="flex justify-start mt-3 p-2">
-                                <a href="{{ path('projets_details') }}" class="bg-amber-600 hover:bg-amber-500 rounded px-3 py-1 tablet:px-2 tablet:text-sm mr-3 shadow-md shadow-black font-medium">Details</a>
-                                <a href="https://evolution-fit.website/" target="_blank" class="bg-gray-200 hover:bg-gray-100 rounded px-3 py-1 tablet:px-2 tablet:text-sm shadow-md shadow-black text-black font-medium">Demo</a>
-                            </div>
-                        </div>
+                    <div class="flex justify-start mt-3 p-2">
+                        <a href="{{ path('projets_details') }}" class="bg-amber-600 hover:bg-amber-500 rounded px-3 py-1 tablet:px-2 tablet:text-sm mr-3 shadow-md shadow-black font-medium">Details</a>
+                        <a href="https://evolution-fit.website/" target="_blank" class="bg-gray-200 hover:bg-gray-100 rounded px-3 py-1 tablet:px-2 tablet:text-sm shadow-md shadow-black text-black font-medium">Demo</a>
                     </div>
                 </div>
+            </div>
 
-            </div>    
+            {# PROJECT 2 #}
+            <div class="coming_soon_pic mt-2 w-1/3 tablet:w-1/2 mobileM:w-full rounded shadow-lg shadow-black">
+                <div class="h-full font-bold flex flex-col items-center justify-center relative mobileM:h-72">
+                    <div class="flex justify-between mt-10 w-auto">
+                        <div class="mr-6 tablet:mr-4 text-center">
+                            <p class="text-5xl tablet:text-3xl mobileM:text-3xl" id="days">00</p>
+                            <span>Days</span>
+                        </div>
+                        <div class="mr-5 tablet:mr-3 text-center">
+                            <p class="text-5xl tablet:text-3xl mobileM:text-3xl" id="hours">00</p>
+                            <span>Hours</span>
+                        </div>
+                        <div class="mr-2 tablet:mr-0 text-center">
+                            <p class="text-5xl tablet:text-3xl mobileM:text-3xl" id="minutes">00</p>
+                            <span>Minutes</span>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-5xl tablet:text-3xl mobileM:text-3xl" id="seconds">00</p>
+                            <span>Seconds</span>
+                        </div>
+                    </div>
+                    <p class="text-3xl tablet:text-xl mobileM:text-2xl opacity-50 absolute bottom-0">New <span class="text-amber-600">Projects</span> is coming</p>
+                </div>
+            </div>      
         </div>
-
     </section>
 </main>
+
+<script>
+    // I get back the limit time
+    var countDownDate = new Date("May 13, 2023 00:00:00").getTime();
+    var x = setInterval(function() {
+        // I get back the current time
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+
+        // When time is over 
+        if(distance < 0) {
+            clearInterval(x);
+            document.getElementById("days").innerHTML = "00";
+            document.getElementById("hours").innerHTML = "00";
+            document.getElementById("minutes").innerHTML = "00";
+            document.getElementById("seconds").innerHTML = "00";
+        }
+
+    },1000)
+
+</script>
