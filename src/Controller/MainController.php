@@ -8,7 +8,9 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Translation\TranslatableMessage;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MainController extends AbstractController
@@ -37,13 +39,20 @@ class MainController extends AbstractController
         $form = $this->createForm(ContactType::class, $contact);
 
         $form->handleRequest($request);
+
         
         if($form->isSubmitted() && $form->isValid()){
-            // dd($form->getData());
+
            $em->persist($contact);
            $em->flush();
 
-           $this->addFlash('success', 'Votre message a bien été envoyé');
+           $this->addFlash('success', 
+           new TranslatableMessage(
+               'message.success',
+               [],
+               'flashmessage'
+           )
+       );
 
             return $this->redirectToRoute('home');
         }

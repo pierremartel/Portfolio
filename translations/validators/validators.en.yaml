@@ -1,0 +1,9 @@
+message:
+  name:
+    notBlank: "You must give your name"
+  email:
+    notBlank: "You must give your email address"
+    email: "This value is not a valid email address"
+  message:
+    notBlank: "You must give a message"
+    length: "The message should be 5 characters or more."

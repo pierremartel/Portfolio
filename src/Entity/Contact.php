@@ -21,21 +21,21 @@ class Contact
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="Votre nom est obligatoire !")
+     * @Assert\NotBlank(message="message.name.notBlank")
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="Votre adresse email est obligatoire !")
-     * @Assert\Email(message="L'adresse définit n'est pas une adresse valide")
+     * @Assert\NotBlank(message="message.email.notBlank")
+     * @Assert\Email(message="message.email.email")
      */
     private $email;
 
     /**
      * @ORM\Column(type="text")
-     * @Assert\NotBlank(message="Votre message est obligatoire !")
-     * @Assert\Length(min=5, minMessage="Votre message doit comporter au minimum 5 caractères")
+     * @Assert\NotBlank(message="message.message.notBlank")
+     * @Assert\Length(min=5, minMessage="message.message.length")
      */
     private $message;
 

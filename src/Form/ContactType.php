@@ -20,7 +20,7 @@ class ContactType extends AbstractType
                     'placeholder' => 'contact.page.name',
             ],
                 'label' => false,
-                'required' => false,
+                'required' => false
 
             ])
             ->add('email', EmailType::class, [
