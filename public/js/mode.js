@@ -2,7 +2,7 @@
 const sunIcon = document.querySelector(".sun");
 const moonIcon = document.querySelector(".moon");
 
-console.log(sunIcon, moonIcon);
+// console.log(sunIcon, moonIcon);
 
 // Theme Vars
 const userTheme = localStorage.getItem("theme");

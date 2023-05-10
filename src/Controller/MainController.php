@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use DateTimeImmutable;
 use App\Entity\Contact;
 use App\Form\ContactType;
 use Doctrine\ORM\EntityManagerInterface;
@@ -28,13 +29,14 @@ class MainController extends AbstractController
     /**
      * @Route(
      * {
-     *      "en": "/home",
-     *      "fr": "/accueil"     
+     *      "en": "/",
+     *      "fr": "/"     
      * }, name="home")
      */
     public function home(Request $request, EntityManagerInterface $em): Response
     {
         $contact = new Contact();
+        date_default_timezone_set('Europe/Paris');
 
         $form = $this->createForm(ContactType::class, $contact);
 
@@ -42,6 +44,8 @@ class MainController extends AbstractController
 
         
         if($form->isSubmitted() && $form->isValid()){
+
+           $contact->setCreatedAt(new DateTimeImmutable());
 
            $em->persist($contact);
            $em->flush();
